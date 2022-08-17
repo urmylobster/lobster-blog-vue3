@@ -8,6 +8,7 @@
   <p>getters</p>
   <p>getters: {{ store.getCountBuff}} </p>
   <p>getters: {{ store.getMsgWithThis}}</p>
+  <p v-for="item in store.getAllanStoreList">{{item}}</p>
 </template>
 
 <script setup lang="ts">

@@ -1,4 +1,5 @@
 import { defineStore } from 'pinia'
+import { allanStore } from './allan'
 
 
 export const mainStore = defineStore('main',{
@@ -15,6 +16,9 @@ export const mainStore = defineStore('main',{
     },
     getMsgWithThis(): string{
       return `${this.msg}**${this.count}`
+    },
+    getAllanStoreList(): string[] {
+      return allanStore().movieList
     }
   },
   actions: {
