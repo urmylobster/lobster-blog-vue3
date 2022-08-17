@@ -1,6 +1,8 @@
 <template>
   <h1>{{ msg }}</h1>
   <button @click="increment">count ++</button>
+  <el-button type="primary">Primary</el-button>
+  <el-button type="success">Success</el-button>
   <p>count is {{count}}</p>
 </template>
 
