@@ -23,4 +23,14 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src'),
     }
   },
+  server: {
+    // 设置 https 代理
+    proxy: {
+        '/api': {
+            target: 'http://localhost:9607',
+            changeOrigin: true,
+            rewrite: (path: string) => path.replace(/^\/api/, '')
+        }
+    }
+  }
 })

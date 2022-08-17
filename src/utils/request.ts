@@ -1,7 +1,26 @@
 import axios, { AxiosRequestConfig, AxiosResponse } from 'axios'
 
+interface IResponseType<P = {}> {
+  code: number;
+  msg: string;
+  data: P;
+}
+
+interface IHttpParams {
+  url: string,
+  method: string,
+  data?: object,
+  params?: object
+}
+
+interface Http {
+  request<T>(params: IHttpParams): Promise<IResponseType<T>>
+}
+
+const isDev = true
+
 const service = axios.create({
-   baseURL: 'http://localhost:9607/posts',
+   baseURL: isDev ? '/api': 'http://localhost:9607/posts',
    timeout: 6000
 })
 
