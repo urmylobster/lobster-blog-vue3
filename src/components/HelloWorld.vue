@@ -1,8 +1,9 @@
 <template>
   <h1>{{ msg }}</h1>
-  <button @click="increment">改变store的数据</button>
+  <button @click="increment">改变store的数据count++</button>
   <button @click="onObjClick">$patch对象形式改变store的数据</button>
   <button @click="onFuncClick">$patch改变store的数据</button>
+  <button @click="actionClick">action改变store的数据</button>
   <p>count is {{ count }}</p>
 </template>
 
@@ -32,6 +33,10 @@ const onFuncClick = () => {
     state.count = state.count + 2;
     state.msg = state.msg.split('').reverse().join('')
   })
+}
+
+const actionClick = () => {
+  store.changeState()
 }
 </script>
 

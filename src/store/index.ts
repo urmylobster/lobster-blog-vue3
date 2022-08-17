@@ -11,5 +11,11 @@ export const mainStore = defineStore('main',{
   getters: {
 
   },
-  actions: {}
+  actions: {
+    // 不能使用箭头函数
+    changeState(){
+      this.msg = "hello I‘m changed pinia";
+      this.count++;
+    }
+  }
 })
