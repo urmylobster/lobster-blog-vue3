@@ -5,6 +5,9 @@
   <button @click="onFuncClick">$patch改变store的数据</button>
   <button @click="actionClick">action改变store的数据</button>
   <p>count is {{ count }}</p>
+  <p>getters</p>
+  <p>getters: {{ store.getCountBuff}} </p>
+  <p>getters: {{ store.getMsgWithThis}}</p>
 </template>
 
 <script setup lang="ts">

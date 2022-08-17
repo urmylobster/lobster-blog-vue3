@@ -9,7 +9,13 @@ export const mainStore = defineStore('main',{
     }
   },
   getters: {
-
+    getCountBuff(state){
+      console.log("getter被调用")
+      return `${state.msg}##${state.count}`
+    },
+    getMsgWithThis(): string{
+      return `${this.msg}**${this.count}`
+    }
   },
   actions: {
     // 不能使用箭头函数
