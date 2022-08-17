@@ -1,6 +1,8 @@
 <template>
   <h1>{{ msg }}</h1>
   <button @click="increment">改变store的数据</button>
+  <button @click="onObjClick">$patch对象形式改变store的数据</button>
+  <button @click="onFuncClick">$patch改变store的数据</button>
   <p>count is {{ count }}</p>
 </template>
 
@@ -10,23 +12,26 @@ import { storeToRefs } from 'pinia'
 
 const store = mainStore()
 
-// 1.直接解构失去响应性
-// let { count } = store
-// let { msg } = store
+let { count, msg } = storeToRefs(store)
 
-// const increment = () => {
-//   count++
-//   msg = "hello I changed view don't know"
-//   console.log(count, msg)
-// }
-
-// 2.用storeToRefs包裹保持响应性
-let { count, msg }  = storeToRefs(store)
-
+// 1.简单数据修改
 const increment = () => {
-  count.value++
-  msg.value = "hello I changed pinia"
-  console.log(count, msg)
+  store.count++
+}
+
+// 2.多条数据修改使用$patch的API
+const onObjClick = () => {
+  store.$patch({
+    count: store.count + 2,
+    msg: store.msg.split('').reverse().join('')
+  })
+}
+
+const onFuncClick = () => {
+  store.$patch(state => {
+    state.count = state.count + 2;
+    state.msg = state.msg.split('').reverse().join('')
+  })
 }
 </script>
 
