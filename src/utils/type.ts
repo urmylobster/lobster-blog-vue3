@@ -1,4 +1,4 @@
-export interface IResponseType<P = {}> {
+export interface IResponse<P = {}> {
   code: number;
   msg: string;
   data: P;

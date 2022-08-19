@@ -16,7 +16,8 @@ let postData = reactive({
   list: []
 })
 onMounted(async () => {
-  const res = await getPostsList();
+  const res: Array<PostData> = await getPostsList();
+  console.log(res )
   postList.value = res;
   postData.list = res;
 })

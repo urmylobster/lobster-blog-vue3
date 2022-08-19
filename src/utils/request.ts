@@ -1,7 +1,8 @@
 import axios, { AxiosInstance, AxiosRequestConfig, AxiosResponse } from 'axios'
 import { ElMessage } from 'element-plus'
+import { IResponse } from './type'
 
-const isDev = true
+const isDev = import.meta.env.MODE == 'development' ? true :false;
 
 const service: AxiosInstance = axios.create({
    baseURL: isDev ? '/api': 'http://localhost:9607/posts',
@@ -20,7 +21,7 @@ service.interceptors.request.use(
 service.interceptors.response.use(
   async (res: AxiosResponse) => {
     if(res.status == 200) {
-      const data = res.data;
+      const data: IResponse = res.data;
       if(data.code == 0) {
         return data.data
       } else {
