@@ -27,7 +27,7 @@ export default defineConfig({
     // 设置 https 代理
     proxy: {
         '/api': {
-            target: 'http://localhost:9607',
+            target: 'http://localhost:8080/',
             changeOrigin: true,
             rewrite: (path: string) => path.replace(/^\/api/, '')
         }
