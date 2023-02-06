@@ -7,6 +7,7 @@
 
 * Vue3
 * TypeScript
-* Vuex/Pinia 
-* Vite 
+* Vuex
+* Vite
 * ElementPlus
+* Tailwindcss

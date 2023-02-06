@@ -13,6 +13,7 @@ import { PostData, PostRes } from '@/types/index'
 let postData: PostData = reactive({
   list: []
 })
+
 onMounted(async () => {
   const res = await getPostsList();
   postData.list = res;

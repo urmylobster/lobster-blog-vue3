@@ -23,7 +23,7 @@ service.interceptors.response.use(
     if(res.status == 200) {
       const data: IResponse = res.data;
       if(data.code == 0) {
-        return data.data
+        return Promise.resolve(data.data)
       } else {
         ElMessage({
           message: data.msg,

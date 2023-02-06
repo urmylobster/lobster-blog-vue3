@@ -11,3 +11,10 @@ export interface IHttpParams {
   params?: object
 }
 
+
+export interface InsertDataType {
+  postAuthor: string,
+  postContent: string,
+  postTitle: string,
+  postsId?: string,
+}
