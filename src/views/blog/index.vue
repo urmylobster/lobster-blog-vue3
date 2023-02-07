@@ -25,10 +25,10 @@ onMounted(async () => {
 <style scoped>
 .wd-100 {
   width: 100%;
-  padding-top: 2.8rem;
+  padding-top: 1.8rem;
 }
 .item {
-  width: 22.5rem;
+  width: 9.2rem;
   min-height: 9.6rem;
   margin-bottom: 26px;
   border: 2px solid #afafaf;
@@ -36,11 +36,12 @@ onMounted(async () => {
 }
 
 .title {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: bolder;
   padding: 0.35rem 0;
 }
 .content {
+  font-size: 18px;
   padding: 0 0.2rem;
   text-align: left;
   text-indent: 2em;
