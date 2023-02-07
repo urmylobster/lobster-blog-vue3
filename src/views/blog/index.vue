@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-white "
+  <div class="list"
     v-for="(item) in postData.list" :key="item.postId">
     <h3>{{item.postTitle}}-{{item.postAuthor}}</h3>
     <p>{{item.postContent}}</p>
@@ -20,3 +20,15 @@ onMounted(async () => {
   postData.list = res;
 })
 </script>
+
+<style scoped>
+.list {
+  margin-bottom: 0.48rem;
+}
+.list h3 {
+  font-size: 16px;
+}
+.list p {
+  font-size: 14px;
+}
+</style>
