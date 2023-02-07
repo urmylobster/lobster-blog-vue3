@@ -1,6 +1,8 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@headlessui/vue': ^1.7.9
+  '@heroicons/vue': ^2.0.14
   '@types/node': ^18.7.6
   '@vitejs/plugin-vue': ^3.0.0
   autoprefixer: ^10.4.13
@@ -18,11 +20,13 @@ specifiers:
   vuex: ^4.0.2
 
 dependencies:
+  '@headlessui/vue': 1.7.9_vue@3.2.37
+  '@heroicons/vue': 2.0.14_vue@3.2.37
   autoprefixer: 10.4.13_postcss@8.4.21
   axios: 0.27.2
   element-plus: 2.2.13_vue@3.2.37
   postcss: 8.4.21
-  tailwindcss: 3.2.4
+  tailwindcss: 3.2.4_postcss@8.4.21
   vue: 3.2.37
   vue-router: 4.1.3_vue@3.2.37
   vuex: 4.0.2_vue@3.2.37
@@ -95,6 +99,23 @@ packages:
     resolution: {integrity: sha512-419BMceRLq0RrmTSDxn8hf9R3VCJv2K9PUfugh5JyEFmdjzDo+e8U5EdR8nzKq8Yj1htzLm3b6eQEEam3/rrtg==}
     dependencies:
       '@floating-ui/core': 0.7.3
+    dev: false
+
+  /@headlessui/vue/1.7.9_vue@3.2.37:
+    resolution: {integrity: sha512-vgLBKszj+m2ozaPOnjWMGnspoLJcU/06vygdEAyAS4nDjp72yA7AYbOIEgdaspUhaMs585ApyiSm3jPTuIxAzg==}
+    engines: {node: '>=10'}
+    peerDependencies:
+      vue: ^3.2.0
+    dependencies:
+      vue: 3.2.37
+    dev: false
+
+  /@heroicons/vue/2.0.14_vue@3.2.37:
+    resolution: {integrity: sha512-pA1MLZPX0pyZdaQ5OHD/ILE8V/JCXyWvY2BQig7ZnYO7ZFap9sp969Qasn+1VWxnzB5BLWWcYu80OJPCboWo+g==}
+    peerDependencies:
+      vue: '>= 3'
+    dependencies:
+      vue: 3.2.37
     dev: false
 
   /@nodelib/fs.scandir/2.1.5:
@@ -1141,10 +1162,12 @@ packages:
     resolution: {integrity: sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==}
     engines: {node: '>= 0.4'}
 
-  /tailwindcss/3.2.4:
+  /tailwindcss/3.2.4_postcss@8.4.21:
     resolution: {integrity: sha512-AhwtHCKMtR71JgeYDaswmZXhPcW9iuI9Sp2LvZPo9upDZ7231ZJ7eA9RaURbhpXGVlrjX4cFNlB4ieTetEb7hQ==}
     engines: {node: '>=12.13.0'}
     hasBin: true
+    peerDependencies:
+      postcss: ^8.0.9
     dependencies:
       arg: 5.0.2
       chokidar: 3.5.3

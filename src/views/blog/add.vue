@@ -1,18 +1,26 @@
 <template>
-  <div class="container">
-    <el-form :model="form" label-width="120px">
+  <div class="text-editor">
+    <el-form
+      :model="form"
+      size="large"
+      label-width="20"
+      label-position="top">
       <el-form-item label="标题">
-        <el-input v-model="form.title" />
+        <el-input
+          v-model="form.title" />
       </el-form-item>
       <el-form-item label="作者">
         <el-input v-model="form.name" />
       </el-form-item>
       <el-form-item label="内容">
-        <el-input v-model="form.content" type="textarea" />
+        <el-input
+          type="textarea"
+          v-model="form.content"
+          :autosize="{ minRows: 20, maxRows: 50 }"/>
       </el-form-item>
       <el-form-item>
-        <el-button type="primary" @click="onSubmit">提交</el-button>
-        <el-button>取消</el-button>
+        <el-button class="action-button" type="primary" @click="onSubmit">提交</el-button>
+        <el-button class="action-button">取消</el-button>
       </el-form-item>
     </el-form>
   </div>
@@ -52,8 +60,11 @@ const onSubmit = async () => {
 </script>
 
 <style scoped>
-.container {
-  width: 100%;
-
+.text-editor {
+  padding: 0.6rem;
+  min-width: 9.6rem;
+}
+.action-button {
+  min-width: 4.04rem;
 }
 </style>
