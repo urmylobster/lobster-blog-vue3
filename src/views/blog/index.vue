@@ -1,5 +1,6 @@
 <template>
-  <div v-for="(item) in postData.list" :key="item.postId">
+  <div class="bg-white "
+    v-for="(item) in postData.list" :key="item.postId">
     <h3>{{item.postTitle}}-{{item.postAuthor}}</h3>
     <p>{{item.postContent}}</p>
   </div>
