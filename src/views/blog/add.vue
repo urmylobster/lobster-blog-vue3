@@ -1,19 +1,21 @@
 <template>
-  <el-form :model="form" label-width="120px">
-    <el-form-item label="标题">
-      <el-input v-model="form.title" />
-    </el-form-item>
-    <el-form-item label="作者">
-      <el-input v-model="form.name" />
-    </el-form-item>
-    <el-form-item label="内容">
-      <el-input v-model="form.content" type="textarea" />
-    </el-form-item>
-    <el-form-item>
-      <el-button type="primary" @click="onSubmit">提交</el-button>
-      <el-button>取消</el-button>
-    </el-form-item>
-  </el-form>
+  <div class="container">
+    <el-form :model="form" label-width="120px">
+      <el-form-item label="标题">
+        <el-input v-model="form.title" />
+      </el-form-item>
+      <el-form-item label="作者">
+        <el-input v-model="form.name" />
+      </el-form-item>
+      <el-form-item label="内容">
+        <el-input v-model="form.content" type="textarea" />
+      </el-form-item>
+      <el-form-item>
+        <el-button type="primary" @click="onSubmit">提交</el-button>
+        <el-button>取消</el-button>
+      </el-form-item>
+    </el-form>
+  </div>
 </template>
 
 <script lang="ts" setup>
@@ -48,3 +50,10 @@ const onSubmit = async () => {
   }
 }
 </script>
+
+<style scoped>
+.container {
+  width: 100%;
+
+}
+</style>
