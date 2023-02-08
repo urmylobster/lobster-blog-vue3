@@ -1,7 +1,11 @@
 <template>
   <div class="wd-100">
+    <h2 class="text-sm text-orange-600 font-bold">小龙虾🦞的博客</h2>
+    <h6 class="text-xs font-mono mb-2">You are my lobster</h6>
     <div class="item" v-for="(item) in postData.list" :key="item.postId">
-      <h3 class="title">{{item.postTitle}}-{{item.postAuthor}}</h3>
+      <h3 class="title">{{item.postTitle}}
+        <p>{{item.postAuthor}}</p>
+      </h3>
       <p class="content">{{item.postContent}}</p>
     </div>
   </div>
@@ -28,7 +32,7 @@ onMounted(async () => {
   padding-top: 1.8rem;
 }
 .item {
-  width: 9.2rem;
+  width: 8.25rem;
   min-height: 9.6rem;
   margin-bottom: 26px;
   border: 2px solid #afafaf;
@@ -40,9 +44,13 @@ onMounted(async () => {
   font-weight: bolder;
   padding: 0.35rem 0;
 }
+
+.title p {
+  line-height: 1.5;
+}
 .content {
   font-size: 18px;
-  padding: 0 0.2rem;
+  padding: 0 0.48rem;
   text-align: left;
   text-indent: 2em;
 }
