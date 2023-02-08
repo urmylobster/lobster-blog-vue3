@@ -3,7 +3,7 @@
     <h2 class="text-sm text-orange-600 font-bold">小龙虾🦞的博客</h2>
     <h6 class="text-xs font-mono mb-2">You are my lobster</h6>
     <div class="item mb-4" v-for="(item) in postData.list" :key="item.postId">
-      <h3 class="title">{{item.postTitle}}<p>{{item.postAuthor}}</p>
+      <h3 class="title">{{item.postTitle}}<p class="mt-1">{{item.postAuthor}}</p>
       </h3>
       <p class="content">
         <div v-html="item.postContent"></div>

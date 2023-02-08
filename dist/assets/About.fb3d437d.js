@@ -1,1 +1,0 @@
-import{d as o,h as a,c as s,e,t as n,F as u,b as l}from"./index.2642c396.js";const c=e("p",null,"hello about",-1),r=e("p",null,"\u4F60\u597Dabout",-1),d=o({__name:"About",setup(_){const t=a("\u6D4B\u8BD5\u8DEF\u7531");return(p,m)=>(l(),s(u,null,[c,r,e("p",null,n(t.value),1)],64))}});export{d as default};
