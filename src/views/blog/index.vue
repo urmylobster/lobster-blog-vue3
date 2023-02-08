@@ -6,7 +6,9 @@
       <h3 class="title">{{item.postTitle}}
         <p>{{item.postAuthor}}</p>
       </h3>
-      <p class="content">{{item.postContent}}</p>
+      <p class="content">
+        <div v-html="item.postContent"></div>
+      </p>
     </div>
   </div>
 </template>
