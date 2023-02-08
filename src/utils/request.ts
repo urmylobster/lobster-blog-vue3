@@ -5,7 +5,7 @@ import { IResponse } from './type'
 const isDev = import.meta.env.MODE == 'development' ? true :false;
 
 const service: AxiosInstance = axios.create({
-   baseURL: isDev ? '/api': 'http://localhost:9607/posts',
+   baseURL: isDev ? '/api': 'https://urmylobster.com/api/',
    timeout: 6000
 })
 

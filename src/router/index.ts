@@ -1,4 +1,4 @@
-import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router'
+import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
 
 const routes : Array<RouteRecordRaw> = [
   {
@@ -17,6 +17,16 @@ const routes : Array<RouteRecordRaw> = [
     component: () => import('@/views/blog/add.vue'),
   },
   {
+    path: '/posts',
+    name: 'posts',
+    component: () => import('@/views/posts/index.vue')
+  },
+  {
+    path: '/insert',
+    name: 'insert',
+    component: () => import('@/views/posts/add.vue'),
+  },
+  {
     path: '/hello',
     name: 'HelloWorld',
     component: () => import('@/components/HelloWorld.vue')
@@ -29,7 +39,7 @@ const routes : Array<RouteRecordRaw> = [
 ]
 
 const router = createRouter({
-  history: createWebHashHistory(),
+  history: createWebHistory(),
   routes
 })
 

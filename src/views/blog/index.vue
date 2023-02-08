@@ -1,8 +1,9 @@
 <template>
-  <div class="list"
-    v-for="(item) in postData.list" :key="item.postId">
-    <h3>{{item.postTitle}}-{{item.postAuthor}}</h3>
-    <p>{{item.postContent}}</p>
+  <div class="wd-100">
+    <div class="item" v-for="(item) in postData.list" :key="item.postId">
+      <h3 class="title">{{item.postTitle}}-{{item.postAuthor}}</h3>
+      <p class="content">{{item.postContent}}</p>
+    </div>
   </div>
 </template>
 
@@ -22,13 +23,27 @@ onMounted(async () => {
 </script>
 
 <style scoped>
-.list {
-  margin-bottom: 0.48rem;
+.wd-100 {
+  width: 100%;
+  padding-top: 1.8rem;
 }
-.list h3 {
-  font-size: 16px;
+.item {
+  width: 9.2rem;
+  min-height: 9.6rem;
+  margin-bottom: 26px;
+  border: 2px solid #afafaf;
+  border-radius: 12px;
 }
-.list p {
-  font-size: 14px;
+
+.title {
+  font-size: 20px;
+  font-weight: bolder;
+  padding: 0.35rem 0;
+}
+.content {
+  font-size: 18px;
+  padding: 0 0.2rem;
+  text-align: left;
+  text-indent: 2em;
 }
 </style>
