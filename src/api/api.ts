@@ -15,3 +15,18 @@ export function addPosts(data : InsertDataType) {
     data
   })
 }
+
+export function getPostById(data : any) {
+  return request({
+    url: `/posts/getById/${data.id}`,
+    method: 'GET',
+  })
+}
+
+export function updatePosts(data : InsertDataType) {
+  return request({
+    url: '/posts/update',
+    method: 'POST',
+    data
+  })
+}

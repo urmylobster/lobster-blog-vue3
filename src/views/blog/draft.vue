@@ -48,9 +48,6 @@
 
 
 <script lang="ts" setup>
-import { reactive } from 'vue'
-
-// do not use same name with ref
 const form = reactive({
   region: '',
   date1: '',

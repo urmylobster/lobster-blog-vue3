@@ -5,7 +5,9 @@
     <div class="item mb-4" v-for="(item) in postData.list" :key="item.postId">
       <h3 class="text-tiny py-1 flex font-bol justify-center">
         <span class="mr-0.5">{{item.postTitle}}</span>
-        <DocumentTextIcon class="inline-block w-2 h-2 align-middle"/>
+        <DocumentTextIcon
+          class="inline-block w-2 h-2 align-middle"
+          @click="toEditPost(item.postId)"/>
       </h3>
       <p class="text-tiny mt-1 leading-normal">{{item.postAuthor}}</p>
       <p class="content">
@@ -16,7 +18,6 @@
 </template>
 
 <script lang="ts" setup>
-import { onMounted, ref, reactive, toRefs } from 'vue'
 import { DocumentTextIcon } from '@heroicons/vue/24/solid'
 import { getPostsList } from '@/api/api'
 import { PostData, PostRes } from '@/types/index'
@@ -24,6 +25,17 @@ import { PostData, PostRes } from '@/types/index'
 let postData: PostData = reactive({
   list: []
 })
+
+const router = useRouter()
+
+const toEditPost = (postItemId : number) => {
+  router.push({
+    path: '/edit',
+    query: {
+      id: postItemId
+    }
+  })
+}
 
 onMounted(async () => {
   const res = await getPostsList();

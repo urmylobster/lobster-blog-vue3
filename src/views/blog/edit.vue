@@ -28,33 +28,50 @@
 
 <script lang="ts" setup>
 import { ElMessage } from 'element-plus'
-import { addPosts } from '@/api/api'
+import { getPostById, updatePosts } from '@/api/api';
 
-const form = reactive({
+let form = reactive({
+  id: '',
   title: '',
   name: '',
   content: '',
 })
 
 const router = useRouter()
+const route = useRoute()
+
 
 const onSubmit = async () => {
   let params = {
+    postId: form.id,
     postTitle: form.title,
     postAuthor: form.name,
     postContent: form.content,
   }
 
-  const res = await addPosts(params)
+  const res = await updatePosts(params)
 
   if(res) {
     ElMessage({
-      message: "添加成功",
+      message: "修改成功",
       type: "success"
     });
     router.replace('/blog')
   }
 }
+
+const getPostDetail = async () => {
+  const postId  = route.query.id
+  const res = await getPostById({ id: postId })
+  form.id = res.postId
+  form.content = res.postContent
+  form.title = res.postTitle
+  form.name = res.postAuthor
+}
+
+onMounted(() => {
+   getPostDetail()
+})
 </script>
 
 <style scoped>
