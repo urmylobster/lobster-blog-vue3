@@ -2,17 +2,10 @@
   <div class="wd-100">
     <h2 class="text-sm text-orange-600 font-bold mb-2">小龙虾🦞的博客</h2>
     <h6 class="text-tiny font-mono mb-2">You are my lobster</h6>
-    <div class="item mb-4" v-for="(item) in postData.list" :key="item.postId">
-      <h3 class="text-tiny py-1 flex font-bol justify-center">
-        <span class="mr-0.5">{{item.postTitle}}</span>
-        <DocumentTextIcon
-          class="inline-block w-2 h-2 align-middle"
-          @click="toEditPost(item.postId)"/>
+    <div class="mb-4" v-for="(item) in postData.list" :key="item.postId">
+      <h3 class="text-tiny py-1 flex font-bold justify-center">
+        <span class="mr-0.5 font-semibold" @click="toDetail(item.postId)">{{item.postTitle}}</span>
       </h3>
-      <p class="text-tiny mt-1 leading-normal">{{item.postAuthor}}</p>
-      <p class="content">
-        <div v-html="item.postContent"></div>
-      </p>
     </div>
   </div>
 </template>
@@ -28,9 +21,9 @@ let postData: PostData = reactive({
 
 const router = useRouter()
 
-const toEditPost = (postItemId : number) => {
+const toDetail = (postItemId : number) => {
   router.push({
-    path: '/edit',
+    path: '/detail',
     query: {
       id: postItemId
     }
@@ -48,21 +41,5 @@ onMounted(async () => {
   /* background: #afafaf; */
   width: 100%;
   padding-top: 1.8rem;
-}
-.item {
-  width: 8.85rem;
-  min-height: 9.6rem;
-  padding: 0.24rem;
-  background: #0a02c00f;
-  border: 2px solid #afafaf;
-  border-radius: 12px;
-}
-.content {
-  font-size: 18px;
-  padding: 0.34rem 0.48rem;
-  text-align: left;
-}
-.content div {
-  white-space: pre-wrap;
 }
 </style>
