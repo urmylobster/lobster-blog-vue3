@@ -1,4 +1,5 @@
 <template>
+  <BlogHeader />
   <div class="text-editor">
     <el-form
       :model="form"

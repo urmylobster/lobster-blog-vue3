@@ -1,6 +1,6 @@
 <template>
   <div class="wd-100">
-    <h2 class="text-sm text-orange-600 font-bold mb-2">小龙虾🦞的博客</h2>
+    <BlogHeader />
     <h6 class="text-tiny font-mono mb-2">You are my lobster</h6>
     <div class="item mb-4">
       <h3 class="text-tiny py-1 flex font-bold justify-center">
