@@ -31,7 +31,7 @@ export default defineConfig({
     proxy: {
         '/api': {
             target: 'http://localhost:8080/',
-            // target: 'https://urmylobster.com',
+            // target: 'http://45.125.34.193:8080/',
             changeOrigin: true,
             rewrite: (path: string) => path.replace(/^\/api/, '')
         }
