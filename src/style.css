@@ -83,3 +83,13 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+.lobster-msg {
+
+  background-color: rgb(253 186 116) !important;
+}
+.lobster-msg .el-message-icon--success,
+.lobster-msg .el-message__content{
+  color: rgb(234 88 12) !important;
+  font-size: .5rem !important;
+}

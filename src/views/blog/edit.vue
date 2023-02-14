@@ -54,7 +54,8 @@ const onSubmit = async () => {
   if(res) {
     ElMessage({
       message: "修改成功",
-      type: "success"
+      type: "success",
+      customClass: "lobster-msg"
     });
     router.replace('/blog')
   }

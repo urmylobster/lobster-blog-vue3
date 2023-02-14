@@ -32,7 +32,7 @@ import { addPosts } from '@/api/api'
 
 const form = reactive({
   title: '',
-  name: '',
+  name: 'GitHub',
   content: '',
 })
 
@@ -50,7 +50,8 @@ const onSubmit = async () => {
   if(res) {
     ElMessage({
       message: "添加成功",
-      type: "success"
+      type: "success",
+      customClass: "lobster-msg"
     });
     router.replace('/blog')
   }
