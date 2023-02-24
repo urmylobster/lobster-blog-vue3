@@ -11,3 +11,12 @@
 * Vite
 * ElementPlus
 * Tailwindcss
+
+### 特性
+
+* 文章列表
+* 查看文章
+* 编辑文章
+* TODO 富文本编辑器
+* TODO 搜索文章
+* TODO 标签归类
