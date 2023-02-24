@@ -1,8 +1,16 @@
 <template>
-  <h2 class="mt-6 text-sm text-orange-600 font-bold mb-2">
-    <HomeIcon class="inline-block w-4 h-4 align-middle" @click="toIndex"/>
-    小龙虾🦞的博客
-  </h2>
+   <header class="py-4">
+    <div class="max-w-2xl mx-auto px-4 flex items-center relative">
+      <a href="/" class="flex items-center">
+        🦞<p class="ml-2 font-bold text-3xl text-orange-600">小龙虾 Lobster</p>
+      </a>
+    </div>
+  </header>
+  <section class="max-w-2xl mx-auto px-2">
+    <div class="flex items-center text-3xl justify-center pt-3 pb-4 border-b border-gray-100">
+      <i> - You are my lobster</i>
+    </div>
+  </section>
 </template>
 
 <script lang="ts" setup>

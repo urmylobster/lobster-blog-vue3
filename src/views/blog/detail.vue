@@ -1,19 +1,20 @@
 <template>
-  <div class="wd-100">
-    <BlogHeader />
-    <h6 class="text-tiny font-mono mb-2">You are my lobster</h6>
-    <div class="item mb-4">
-      <h3 class="text-tiny py-1 flex font-bold justify-center">
-        <span class="mr-0.5 font-semibold">{{post.postTitle}}</span>
+  <BlogHeader />
+  <div class="max-w-2xl mx-auto mt-2">
+    <h2 class="text-3xl font-medium text-left">
+      <p class="text-orange-600 py-1 flex font-bold justify-center">
+        {{post.postTitle}}<br>
         <DocumentTextIcon
-          class="inline-block w-2 h-2 align-middle"
+          class="inline-block w-6 h-6 align-middle"
           @click="toEditPost(post.postId)"/>
-      </h3>
-      <p class="text-tiny mt-1 leading-normal">{{post.postAuthor}}</p>
-      <p class="text-tiny content">
-        <div v-html="post.postContent"></div>
       </p>
-    </div>
+      <p class="my-2 flex items-center justify-center">
+        <span class="text-sm  text-gray-400">2023-02-24</span>
+      </p>
+    </h2>
+    <p class="px-4 py-2 text-left mb-4 ">
+      <div class="whitespace-pre-wrap" v-html="post.postContent"></div>
+    </p>
   </div>
 </template>
 
@@ -43,27 +44,3 @@ onMounted(() => {
   getPageInit()
 })
 </script>
-
-<style scoped>
-.wd-100 {
-  /* background: #afafaf; */
-  width: 100%;
-  padding-top: 1.8rem;
-}
-.item {
-  width: 8.85rem;
-  min-height: 9.6rem;
-  padding: 0.24rem;
-  background: #0a02c00f;
-  border: 2px solid #afafaf;
-  border-radius: 12px;
-}
-.content {
-  font-size: 18px;
-  padding: 0.34rem 0.48rem;
-  text-align: left;
-}
-.content div {
-  white-space: pre-wrap;
-}
-</style>

@@ -1,23 +1,17 @@
 <template>
-  <div class="wd-100">
-    <div class="">
-      <h2 class="text-sm text-orange-600 font-bold mb-2">小龙虾🦞的博客</h2>
-      <h6 class="text-tiny font-mono">You are my lobster</h6>
-      <div class="flex justify-center my-2">
-        <div class="text-center flex items-center text-tiny  bg-orange-300
-        text-orange-600 w-14 h-2 p-2 rounded"
-        @click="addPost">添加文章<PlusCircleIcon class="w-2 h-2" />
-        </div>
-      </div>
-    </div>
-    <div class="" v-for="(item) in postData.list" :key="item.postId">
-      <h3 class="text-tiny py-1 text-orange-600 flex font-bold">
-        <span class="w-10/12 inline-block mr-0.5 font-semibold overflow-hidden
-          whitespace-nowrap text-ellipsis text-left"
-          @click="toDetail(item.postId)">{{item.postTitle}}
-        </span>
-      </h3>
-    </div>
+  <BlogHeader/>
+  <div class="max-w-2xl mx-auto mt-12">
+    <article class="mb-12 px-4" v-for="(item) in postData.list" :key="item.postId">
+      <h2 class="text-3xl font-medium text-left">
+        <a class="hover:underline hover:text-red-600 underline-offset-4 text-orange-600" @click="toDetail(item.postId)">
+          {{item.postTitle}}<br>
+        </a>
+        <p class="my-2 flex items-center">
+          <span class="text-sm  text-gray-400">2023-02-24</span>
+        </p>
+      </h2>
+      <p class="mt-2 text-sm text-gray-600 text-left">{{item.postContent.slice(0,40) + '...'}}</p>
+    </article>
   </div>
 </template>
 

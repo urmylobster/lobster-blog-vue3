@@ -1,29 +1,31 @@
 <template>
   <BlogHeader />
-  <div class="text-editor">
-    <el-form
-      :model="form"
-      size="large"
-      label-width="20"
-      label-position="top">
-      <el-form-item label="标题">
-        <el-input
-          v-model="form.title" />
-      </el-form-item>
-      <el-form-item label="作者">
-        <el-input v-model="form.name" />
-      </el-form-item>
-      <el-form-item label="内容">
-        <el-input
-          type="textarea"
-          v-model="form.content"
-          :autosize="{ minRows: 20, maxRows: 50 }"/>
-      </el-form-item>
-      <el-form-item>
-        <el-button class="action-button" type="primary" @click="onSubmit">提交</el-button>
-        <el-button class="action-button">取消</el-button>
-      </el-form-item>
-    </el-form>
+  <div class="content py-2 mx-auto">
+    <div class="">
+      <el-form
+        :model="form"
+        size="large"
+        label-width="20"
+        label-position="top">
+        <el-form-item label="标题">
+          <el-input
+            v-model="form.title" />
+        </el-form-item>
+        <el-form-item label="作者">
+          <el-input v-model="form.name" />
+        </el-form-item>
+        <el-form-item label="内容">
+          <el-input
+            type="textarea"
+            v-model="form.content"
+            :autosize="{ minRows: 20, maxRows: 50 }"/>
+        </el-form-item>
+        <el-form-item>
+          <el-button class="action-button" type="primary" @click="onSubmit">提交</el-button>
+          <el-button class="action-button">取消</el-button>
+        </el-form-item>
+      </el-form>
+    </div>
   </div>
 </template>
 
@@ -59,11 +61,10 @@ const onSubmit = async () => {
 </script>
 
 <style scoped>
-.text-editor {
-  padding: 0.6rem;
-  min-width: 9.6rem;
+.content {
+  min-width: 20rem;
 }
 .action-button {
-  min-width: 4.04rem;
+  width: 48%;
 }
 </style>
