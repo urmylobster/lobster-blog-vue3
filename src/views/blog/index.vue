@@ -1,6 +1,6 @@
 <template>
   <BlogHeader/>
-  <div class="max-w-2xl mx-auto mt-12">
+  <div class="max-w-2xl mx-auto mt-12 px-4">
     <article class="mb-12 px-4" v-for="(item) in postData.list" :key="item.postId">
       <h2 class="text-3xl font-medium text-left">
         <a class="hover:underline hover:text-red-600 underline-offset-4 text-orange-600" @click="toDetail(item.postId)">

@@ -1,8 +1,8 @@
 <template>
   <BlogHeader />
-  <div class="max-w-2xl mx-auto mt-2">
-    <h2 class="text-3xl font-medium text-left">
-      <p class="text-orange-600 py-1 flex font-bold justify-center">
+  <div class="max-w-2xl mx-auto mt-2 px-4">
+    <h2 class="text-3xl font-medium text-left px-4">
+      <p class="text-orange-600 py-1 flex font-bold justify-center px-4">
         {{post.postTitle}}<br>
         <DocumentTextIcon
           class="inline-block w-6 h-6 align-middle"
