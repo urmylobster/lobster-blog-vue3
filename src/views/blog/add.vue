@@ -31,6 +31,7 @@
 
 <script lang="ts" setup>
 import { addPosts } from '@/api/api'
+import { ElMessage } from 'element-plus';
 
 const form = reactive({
   title: '',

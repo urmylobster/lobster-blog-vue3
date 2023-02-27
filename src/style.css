@@ -91,5 +91,5 @@ button:focus-visible {
 .lobster-msg .el-message-icon--success,
 .lobster-msg .el-message__content{
   color: rgb(234 88 12) !important;
-  font-size: .5rem !important;
+  font-size: 2rem !important;
 }
