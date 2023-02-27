@@ -7,7 +7,7 @@
           {{item.postTitle}}<br>
         </a>
         <p class="my-2 flex items-center">
-          <span class="text-sm  text-gray-400">2023-02-24</span>
+          <span class="text-sm  text-gray-400">{{item.postDate}}</span>
         </p>
       </h2>
       <p class="mt-2 text-sm text-gray-600 text-left">{{item.postContent.slice(0,40) + '...'}}</p>
