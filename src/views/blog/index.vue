@@ -16,7 +16,6 @@
 </template>
 
 <script lang="ts" setup>
-import { PlusCircleIcon } from '@heroicons/vue/24/solid'
 import { getPostsList } from '@/api/api'
 import { PostData, PostRes } from '@/types/index'
 
@@ -44,11 +43,3 @@ onMounted(async () => {
   postData.list = res;
 })
 </script>
-
-<style scoped>
-.wd-100 {
-  /* background: #afafaf; */
-  width: 100%;
-  padding-top: 1.8rem;
-}
-</style>

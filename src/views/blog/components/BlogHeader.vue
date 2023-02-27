@@ -5,7 +5,7 @@
         🦞<p class="ml-2 font-bold text-3xl text-orange-600">小龙虾 Lobster</p>
       </a>
       <div class="rounded-lg border-2 px-2 my-2 border-orange-400">
-        <MagnifyingGlassIcon class="inline-block text-orange-600 w-4 h-4 align-middle" />
+        <MagnifyingGlassIcon @click="router.push('/search')" class="inline-block text-orange-600 w-4 h-4 align-middle" />
       </div>
     </div>
   </header>
@@ -17,8 +17,7 @@
 </template>
 
 <script lang="ts" setup>
-import useToIndex from '../compositions/useToIndex';
 import { MagnifyingGlassIcon } from '@heroicons/vue/24/solid'
 
-const { toIndex } = useToIndex()
+const router = useRouter()
 </script>
