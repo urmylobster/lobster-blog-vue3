@@ -30,3 +30,11 @@ export function updatePosts(data : InsertDataType) {
     data
   })
 }
+
+export function searchPosts(data : object) {
+  return request({
+    url: '/posts/search',
+    method: 'GET',
+    params: data
+  })
+}

@@ -31,6 +31,7 @@
 
 <script lang="ts" setup>
 import { getPostById, updatePosts } from '@/api/api';
+import { ElMessage } from 'element-plus';
 
 let form = reactive({
   id: '',
