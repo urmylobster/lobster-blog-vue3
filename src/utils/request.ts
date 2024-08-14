@@ -2,11 +2,11 @@ import axios, { AxiosInstance, AxiosRequestConfig, AxiosResponse } from 'axios'
 import { ElMessage } from 'element-plus'
 import { IResponse } from './type'
 
-const isDev = import.meta.env.MODE == 'development' ? true :false;
+const isDev = import.meta.env.MODE == 'development' ? true : false;
 
 const service: AxiosInstance = axios.create({
-   baseURL: isDev ? '/api': 'https://urmylobster.com/api/',
-   timeout: 6000
+  baseURL: isDev ? '/api' : 'https://limingxin.cn/api/',
+  timeout: 6000
 })
 
 service.interceptors.request.use(
@@ -20,9 +20,9 @@ service.interceptors.request.use(
 
 service.interceptors.response.use(
   async (res: AxiosResponse) => {
-    if(res.status == 200) {
+    if (res.status == 200) {
       const data: IResponse = res.data;
-      if(data.code == 0) {
+      if (data.code == 0) {
         return Promise.resolve(data.data)
       } else {
         ElMessage({
@@ -41,7 +41,7 @@ service.interceptors.response.use(
   },
   (error: any) => {
     const { response } = error;
-    if(response) {
+    if (response) {
       // 请求已发出,但是不在2xx的范围
       ElMessage({
         message: "网络错误!",
