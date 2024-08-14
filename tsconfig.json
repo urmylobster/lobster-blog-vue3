@@ -23,7 +23,7 @@
     "target": "ESNext",
     // 要包含的类型声明文件名列表
     "types": [
-
+      "vite/client"
     ],
     "isolatedModules": true,
     // 模块名到基于 baseUrl的路径映射的列表。
@@ -55,5 +55,9 @@
   "exclude": [
     "node_modules"
   ],
-  "references": [{ "path": "./tsconfig.node.json" }]
+  "references": [
+    {
+      "path": "./tsconfig.node.json"
+    }
+  ]
 }
